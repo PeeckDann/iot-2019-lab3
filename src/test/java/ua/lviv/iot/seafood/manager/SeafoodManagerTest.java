@@ -13,26 +13,26 @@ import ua.lviv.iot.seafood.model.Seafood;
 
 public class SeafoodManagerTest extends BaseSeafoodManagerTest {
 
-	private SeafoodManager seafoodManager;
+    private SeafoodManager seafoodManager;
 
-	@BeforeEach
-	public void setUp() {
-		seafoodManager = new SeafoodManager();
-		seafoodManager.addSeafood(fish);
-	}
+    @BeforeEach
+    public void setUp() {
+        seafoodManager = new SeafoodManager();
+        seafoodManager.addSeafood(fish);
+    }
 
-	@Test
-	public void testFindSeafood() {
-		List<Seafood> seafood = seafoodManager.findSeafood(20, 200, "Salmon", ConditionOfProduct.FROSEN);
-		assertEquals(2, seafood.size());
+    @Test
+    public void testFindSeafood() {
+        List<Seafood> seafood = seafoodManager.findSeafood(20, 200, "Salmon", ConditionOfProduct.FROSEN);
+        assertEquals(2, seafood.size());
 
-		assertEquals(50, seafood.get(0).getPriceInGryvnias());
-		assertEquals(170, seafood.get(1).getPriceInGryvnias());
+        assertEquals(50, seafood.get(0).getPriceInGryvnias());
+        assertEquals(170, seafood.get(1).getPriceInGryvnias());
 
-		assertEquals("Salmon", seafood.get(0).getSpeciesOfProduct());
-		assertEquals("Salmon", seafood.get(1).getSpeciesOfProduct());
+        assertEquals("Salmon", seafood.get(0).getSpeciesOfProduct());
+        assertEquals("Salmon", seafood.get(1).getSpeciesOfProduct());
 
-		assertEquals(ConditionOfProduct.FROSEN, seafood.get(0).getConditionOfProduct());
-		assertEquals(ConditionOfProduct.FROSEN, seafood.get(1).getConditionOfProduct());
-	}
+        assertEquals(ConditionOfProduct.FROSEN, seafood.get(0).getConditionOfProduct());
+        assertEquals(ConditionOfProduct.FROSEN, seafood.get(1).getConditionOfProduct());
+    }
 }
