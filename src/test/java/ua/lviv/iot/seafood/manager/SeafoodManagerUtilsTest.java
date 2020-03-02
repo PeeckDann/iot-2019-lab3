@@ -21,10 +21,10 @@ public class SeafoodManagerUtilsTest extends BaseSeafoodManagerTest {
 	@Test
 	public void testSortingByProducerAscending() {
 		SeafoodManagerUtils.sortByProducer(fish, SortType.ASC);
-		"Fifth Firm".compareTo(fish.get(0).getProducer());
-		"First Firm".compareTo(fish.get(1).getProducer());
-		"Fourth Firm".compareTo(fish.get(2).getProducer());
-		"Second Firm".compareTo(fish.get(3).getProducer());
-		"Third Firm".compareTo(fish.get(4).getProducer());
+		assertEquals("Fifth Firm", fish.get(0).getProducer());
+		assertEquals("First Firm", fish.get(1).getProducer());
+		assertEquals("Fourth Firm", fish.get(2).getProducer());
+		assertEquals("Second Firm", fish.get(3).getProducer());
+		assertEquals("Third Firm", fish.get(4).getProducer());
 	}
 }

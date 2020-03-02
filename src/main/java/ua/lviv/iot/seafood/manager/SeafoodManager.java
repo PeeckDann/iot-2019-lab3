@@ -10,8 +10,8 @@ public class SeafoodManager {
 
 	private List<Seafood> seafood = new LinkedList<>();
 
-	public void addSeafood(final List<Seafood> fish) {
-		this.seafood.addAll(fish);
+	public void addSeafood(final List<Seafood> seafood) {
+		this.seafood.addAll(seafood);
 	}
 
 	public List<Seafood> findSeafood(int minPrice, int maxPrice, String speciesOfProduct,
@@ -19,8 +19,8 @@ public class SeafoodManager {
 		List<Seafood> result = new LinkedList<>();
 		for (Seafood seafoodProduct : seafood) {
 			if (seafoodProduct.getPriceInGryvnias() > minPrice && seafoodProduct.getPriceInGryvnias() < maxPrice
-					&& seafoodProduct.getSpeciesOfProduct().equals(speciesOfProduct) == true
-					&& seafoodProduct.getConditionOfProduct().equals(conditionOfProduct) == true) {
+					&& seafoodProduct.getSpeciesOfProduct().equals(speciesOfProduct)
+					&& seafoodProduct.getConditionOfProduct().equals(conditionOfProduct)) {
 				result.add(seafoodProduct);
 			}
 		}

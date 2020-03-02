@@ -1,6 +1,6 @@
 package ua.lviv.iot.seafood.model;
 
-public class Seafood {
+public abstract class Seafood {
 
 	protected int priceInGryvnias;
 

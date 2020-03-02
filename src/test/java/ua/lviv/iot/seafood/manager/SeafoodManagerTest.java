@@ -29,10 +29,10 @@ public class SeafoodManagerTest extends BaseSeafoodManagerTest {
 		assertEquals(50, seafood.get(0).getPriceInGryvnias());
 		assertEquals(170, seafood.get(1).getPriceInGryvnias());
 
-		"Salmon".equals(seafood.get(0).getSpeciesOfProduct());
-		"Salmon".equals(seafood.get(1).getSpeciesOfProduct());
+		assertEquals("Salmon", seafood.get(0).getSpeciesOfProduct());
+		assertEquals("Salmon", seafood.get(1).getSpeciesOfProduct());
 
-		ConditionOfProduct.FROSEN.equals(seafood.get(0).getConditionOfProduct());
-		ConditionOfProduct.FROSEN.equals(seafood.get(1).getConditionOfProduct());
+		assertEquals(ConditionOfProduct.FROSEN, seafood.get(0).getConditionOfProduct());
+		assertEquals(ConditionOfProduct.FROSEN, seafood.get(1).getConditionOfProduct());
 	}
 }
