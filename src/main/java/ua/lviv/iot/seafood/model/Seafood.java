@@ -10,6 +10,8 @@ public abstract class Seafood {
 
     protected ConditionOfProduct conditionOfProduct;
 
+    private String headers = "priceInGryvnias, producer, speciesOfProduct, conditionOfProduct";
+
     public Seafood(int priceInGryvnias, String producer, String speciesOfProduct,
             ConditionOfProduct conditionOfProduct) {
         this.priceInGryvnias = priceInGryvnias;
@@ -48,5 +50,14 @@ public abstract class Seafood {
 
     public void setConditionOfProduct(ConditionOfProduct conditionOfProduct) {
         this.conditionOfProduct = conditionOfProduct;
+    }
+
+    public String getHeaders() {
+        return headers;
+    }
+
+    public String toCSV() {
+        return "priceInGryvnias: " + getPriceInGryvnias() + ", producer: " + getProducer() + ", speciesOfProduct: "
+                + getSpeciesOfProduct() + ", conditionOfProduct: " + getConditionOfProduct();
     }
 }
