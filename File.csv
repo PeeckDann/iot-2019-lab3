@@ -1,0 +1,5 @@
+priceInGryvnias: 50, producer: First Firm, speciesOfProduct: Salmon, conditionOfProduct: FROSEN, productCathegory: Fillet
+priceInGryvnias: 100, producer: Second Firm, speciesOfProduct: Tuna, conditionOfProduct: FROSEN, productCathegory: Fillet
+priceInGryvnias: 10, producer: Third Firm, speciesOfProduct: Tuna, conditionOfProduct: FROSEN, productCathegory: Fillet
+priceInGryvnias: 150, producer: Fourth Firm, speciesOfProduct: Salmon, conditionOfProduct: FRESH, productCathegory: Fillet
+priceInGryvnias: 170, producer: Fifth Firm, speciesOfProduct: Salmon, conditionOfProduct: FROSEN, productCathegory: Fillet
