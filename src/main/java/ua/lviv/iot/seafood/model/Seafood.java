@@ -1,6 +1,6 @@
 package ua.lviv.iot.seafood.model;
 
-public abstract class Seafood {
+public class Seafood {
 
     protected int priceInGryvnias;
 
@@ -10,14 +10,28 @@ public abstract class Seafood {
 
     protected ConditionOfProduct conditionOfProduct;
 
+    protected Integer seafoodId;
+
     private String headers = "priceInGryvnias, producer, speciesOfProduct, conditionOfProduct";
 
+    public Seafood() {
+        this(25, "Company", "Fish", ConditionOfProduct.FROSEN);
+    }
+    
     public Seafood(int priceInGryvnias, String producer, String speciesOfProduct,
             ConditionOfProduct conditionOfProduct) {
         this.priceInGryvnias = priceInGryvnias;
         this.producer = producer;
         this.speciesOfProduct = speciesOfProduct;
         this.conditionOfProduct = conditionOfProduct;
+    }
+
+    public Integer getId() {
+        return seafoodId;
+    }
+
+    public void setId(Integer id) {
+        this.seafoodId = id;
     }
 
     public String getProducer() {
