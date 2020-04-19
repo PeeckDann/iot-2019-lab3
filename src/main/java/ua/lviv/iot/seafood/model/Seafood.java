@@ -1,15 +1,28 @@
 package ua.lviv.iot.seafood.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Seafood {
 
+    @Column(name = "price_in_uah")
     protected int priceInGryvnias;
 
     protected String producer;
 
     protected String speciesOfProduct;
 
+    @Enumerated(EnumType.STRING)
     protected ConditionOfProduct conditionOfProduct;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     protected Integer seafoodId;
 
     private String headers = "priceInGryvnias, producer, speciesOfProduct, conditionOfProduct";
@@ -17,7 +30,7 @@ public class Seafood {
     public Seafood() {
         this(25, "Company", "Fish", ConditionOfProduct.FROSEN);
     }
-    
+
     public Seafood(int priceInGryvnias, String producer, String speciesOfProduct,
             ConditionOfProduct conditionOfProduct) {
         this.priceInGryvnias = priceInGryvnias;
